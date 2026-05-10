@@ -1,67 +1,307 @@
-</body>
-<div style="text-align:center;">
-  <img src="ChatGPT Image 9 de fev. de 2026 08_30_48.png
-" alt="Patrick Laviola - Analista de Sistemas" style="max-width:200px;">
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Patrick Laviola | Analista de Sistemas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dexcar Estoque</title>
+
   <style>
-    body { font-family: Arial, Helvetica, sans-serif; margin: 0; background: #f4f6f8; color: #333; }
-    header { background: #0a3d62; color: #fff; padding: 40px 20px; text-align: center; }
-    header h1 { margin: 0; font-size: 32px; }
-    header p { margin-top: 10px; font-size: 18px; }
-    section { padding: 40px 20px; max-width: 900px; margin: auto; }
-    h2 { color: #0a3d62; }
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    .card h3 { margin-top: 0; }
-    .cta { background: #0a3d62; color: #fff; text-align: center; padding: 40px 20px; }
-    .cta a { background: #25d366; color: #fff; padding: 15px 25px; text-decoration: none; border-radius: 5px; font-size: 18px; }
-    footer { text-align: center; padding: 20px; font-size: 14px; background: #eaeaea; }
+    body {
+      font-family: Arial;
+      background: #f1f5f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .login {
+      width: 300px;
+      margin: 100px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .login h2 {
+      text-align: center;
+      color: #0f172a;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    .erro {
+      color: red;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    header {
+      background: #0f172a;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table th {
+      background: #0f172a;
+      color: white;
+      padding: 12px;
+    }
+
+    table td {
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+    }
+
+    .baixo {
+      background: #fee2e2;
+      color: #dc2626;
+      padding: 5px 10px;
+      border-radius: 20px;
+    }
+
+    .normal {
+      background: #dcfce7;
+      color: #16a34a;
+      padding: 5px 10px;
+      border-radius: 20px;
+    }
+
+    .sair {
+      background: red;
+      width: auto;
+      padding: 10px 20px;
+      float: right;
+      margin-top: -10px;
+    }
   </style>
 </head>
+
 <body>
 
-<header>
-  <h1>Patrick Chapetta Laviola</h1>
-  <p>Analista de Sistemas | Organização • Processos • Tecnologia</p>
-</header>
+  <div id="loginTela" class="login">
 
-<section>
-  <h2>Sobre mim</h2>
-  <p>Sou Analista de Sistemas e ajudo pequenos negócios, igrejas e profissionais a organizar processos, melhorar o uso da tecnologia e tornar o dia a dia mais eficiente, com soluções simples e práticas.</p>
-</section>
+    <h2>Login Dexcar</h2>
 
-<section>
-  <h2>Serviços</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Pacote 1 – Análise Básica</h3>
-      <p>Análise inicial de sistemas e processos, identificação de falhas e orientações práticas de melhoria.</p>
-    </div>
-    <div class="card">
-      <h3>Pacote 2 – Análise + Organização</h3>
-      <p>Organização de sistemas, padronização de processos e ajustes para melhorar o desempenho e reduzir retrabalho.</p>
-    </div>
-    <div class="card">
-      <h3>Pacote 3 – Analista de Sistemas Completo</h3>
-      <p>Diagnóstico completo, otimização de processos, organização avançada e acompanhamento consultivo.</p>
-    </div>
+    <input type="text" id="usuario" placeholder="Usuário">
+
+    <input type="password" id="senha" placeholder="Senha">
+
+    <button onclick="fazerLogin()">
+      Entrar
+    </button>
+
+    <div id="erro" class="erro"></div>
+
   </div>
-</section>
 
-<a href="https://wa.me/5511916789780?text=Olá,%20vim%20pelo%20seu%20site%20e%20quero%20um%20orçamento"
-   target="_blank"
-   style="display:inline-block;padding:15px 25px;background:#25D366;color:#fff;
-          text-decoration:none;border-radius:8px;font-weight:bold;">
-                              Chamar no WhatsApp
-                                    </a>
-</section>
+  <div id="sistema" style="display:none;">
 
-<footer>
-  <p>© 2026 - Patrick Laviola | Analista de Sistemas</p>
-</footer>
+    <header>
+      DEXCAR - SISTEMA DE ESTOQUE
+
+      <button class="sair" onclick="sair()">
+        Sair
+      </button>
+
+    </header>
+
+    <div class="container">
+
+      <div class="card">
+
+        <h2>Cadastrar Produto</h2>
+
+        <input type="text" id="nome" placeholder="Nome do produto">
+
+        <input type="number" id="quantidade" placeholder="Quantidade">
+
+        <input type="number" id="minimo" placeholder="Estoque mínimo">
+
+        <button onclick="adicionarProduto()">
+          Cadastrar Produto
+        </button>
+
+      </div>
+
+      <div class="card">
+
+        <h2>Movimentar Estoque</h2>
+
+        <select id="produtoSelect"></select>
+
+        <input type="number" id="movQuantidade" placeholder="Quantidade">
+
+        <select id="tipoMov">
+          <option value="entrada">Entrada</option>
+          <option value="saida">Saída</option>
+        </select>
+
+        <button onclick="movimentarEstoque()">
+          Salvar Movimentação
+        </button>
+
+      </div>
+
+      <div class="card">
+
+        <h2>Produtos</h2>
+
+        <table>
+
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Quantidade</th>
+              <th>Mínimo</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+
+          <tbody id="tabelaProdutos">
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    let produtos = [];
+
+    function fazerLogin() {
+      const usuario = document.getElementById('usuario').value;
+      const senha = document.getElementById('senha').value;
+      if (usuario === 'admin' && senha === '1234') {
+        document.getElementById('loginTela').style.display = 'none';
+        document.getElementById('sistema').style.display = 'block';
+      } else {
+        document.getElementById('erro').innerText = 'Usuário ou senha inválidos';
+      }
+    }
+
+    function sair() {
+      location.reload();
+    }
+
+    function adicionarProduto() {
+      const nome = document.getElementById('nome').value;
+      const quantidade = parseInt(document.getElementById('quantidade').value);
+      const minimo = parseInt(document.getElementById('minimo').value);
+      if (nome === '' || isNaN(quantidade) || isNaN(minimo)) {
+        alert('Preencha todos os campos');
+        return;
+      }
+      produtos.push({
+        nome,
+        quantidade,
+        minimo
+      });
+      document.getElementById('nome').value = '';
+      document.getElementById('quantidade').value = '';
+      document.getElementById('minimo').value = '';
+      atualizarTela();
+    }
+
+    function atualizarTela() {
+      const tabela = document.getElementById('tabelaProdutos');
+      const select = document.getElementById('produtoSelect');
+      tabela.innerHTML = '';
+      select.innerHTML = '';
+      produtos.forEach((produto, index) => {
+        tabela.innerHTML += `
+<tr>
+<td>${produto.nome}</td>
+<td>${produto.quantidade}</td>
+<td>${produto.minimo}</td>
+<td>
+<span class="${produto.quantidade <= produto.minimo ? 'baixo':'normal'}">
+${produto.quantidade <= produto.minimo ? 'Baixo':'Normal'}
+</span>
+</td>
+</tr>
+`;
+        select.innerHTML += `
+<option value="${index}">
+${produto.nome}
+</option>
+`;
+      });
+    }
+
+    function movimentarEstoque() {
+      const index = document.getElementById('produtoSelect').value;
+      const quantidade = parseInt(document.getElementById('movQuantidade').value);
+      const tipo = document.getElementById('tipoMov').value;
+      if (isNaN(quantidade)) {
+        alert('Digite uma quantidade');
+        return;
+      }
+      if (tipo === 'entrada') {
+        produtos[index].quantidade += quantidade;
+      } else {
+        if (produtos[index].quantidade < quantidade) {
+          alert('Estoque insuficiente');
+          return;
+        }
+        produtos[index].quantidade -= quantidade;
+      }
+      document.getElementById('movQuantidade').value = '';
+      atualizarTela();
+    }
+  </script>
+
+</body>
+
 </html>
